@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fine Art | Customized LED Lighting Manufacturer</title>
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: #141b2d;
+            --text-color: #ffffff;
+            --text-muted: #a0aec0;
+            --accent-color: #ecc94b; /* Premium Gold/Yellow */
+            --border-color: #2d3748;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header Section */
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            border-bottom: 1px solid var(--border-color);
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            border-radius: 12px;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            letter-spacing: 2px;
+            color: var(--text-color);
+            margin-bottom: 10px;
+        }
+
+        header h2 {
+            font-size: 1.3rem;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Features/Why Choose Us Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 50px;
+        }
+
+        .feature-item {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px;
+            font-weight: bold;
+            color: var(--accent-color);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Product Gallery Section */
+        .gallery-title {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .product-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-image-wrapper {
+            width: 100%;
+            height: 280px;
+            background-color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 25px;
+        }
+
+        .product-info h3 {
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            color: var(--text-color);
+        }
+
+        .product-info p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: rgba(236, 201, 75, 0.1);
+            color: var(--accent-color);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid rgba(236, 201, 75, 0.3);
+        }
+
+        /* Contact Footer Section */
+        footer {
+            background: linear-gradient(135deg, #141b2d 0%, #0f172a 100%);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 40px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+
+        .contact-info h3, .contact-team h3 {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .team-member {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .team-member:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .team-role {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
+
+        .team-name {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin: 2px 0;
+        }
+
+        .phone-link, .social-link {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 0.95rem;
+            display: inline-block;
+            margin-top: 2px;
+        }
+
+        .phone-link:hover, .social-link:hover {
+            color: var(--accent-color);
+            text-decoration: underline;
+        }
+
+        .address-text, .email-text {
+            color: var(--text-muted);
+            margin-bottom: 12px;
+            font-size: 1rem;
+        }
+
+        /* Responsive Fixes */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.2rem; }
+            body { padding: 10px; }
+            footer { padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header>
+            <h1>Fine Art</h1>
+            <h2>Customized LED Lighting Manufacturer</h2>
+            <p>We Light Up Your Space With Style & Perfection — Premium Lighting | Modern Designs | Luxury Interiors</p>
+        </header>
+
+        <div class="features-grid">
+            <div class="feature-item">✓ Premium Quality</div>
+            <div class="feature-item">✓ Custom Design</div>
+            <div class="feature-item">✓ On-Time Installation</div>
+            <div class="feature-item">✓ Energy Efficient</div>
+            <div class="feature-item">✓ Elegant Finish</div>
+            <div class="feature-item">✓ Customer Satisfaction</div>
+        </div>
+
+        <h2 class="gallery-title">Our Premium Installations</h2>
+        <div class="products-grid">
+
+            <div class="product-card">
+                <div class="product-image-wrapper">
+                    <img src="1000639000.jpg" alt="Geometric Backlit Onyx Wall Panels">
+                </div>
+                <div class="product-info">
+                    <h3>1. Geometric Backlit Onyx Wall Panels</h3>
+                    <p>Bespoke translucent onyx stone panels cut into striking geometric configurations and backlit with a warm, ambient LED glow. Perfect for luxury feature walls, high-end lounges, and dramatic entryways.</p>
+                    <span class="badge">Premium Ambient Glow</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image-wrapper">
+                    <img src="1000638838.jpg" alt="Floral Radiance Multicolored Chandelier">
+                </div>
+                <div class="product-info">
+                    <h3>2. 'Floral Radiance' Chandeliers</h3>
+                    <p>Exquisite, large-scale circular ceiling installation arranged in a stylized floral petal motif. [span_2](start_span)Features multi-tonal dynamic shifting capabilities showcasing turquoise, gold, and magenta tones[span_2](end_span).</p>
+                    <span class="badge">Multi-Color Control</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image-wrapper">
+                    <img src="1000638788.jpg" alt="Architectural Geometric Ceiling Modules">
+                </div>
+                <div class="product-info">
+                    <h3>3. Architectural Geometric Modules</h3>
+                    <p>Flush-mounted geometric diamond and triangular lighting configurations engineered into architectural ceiling structures. [span_3](start_span)[span_4](start_span)Delivers a vibrant, dual-tone halo trace effect[span_3](end_span)[span_4](end_span).</p>
+                    <span class="badge">Modern Halo Effect</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image-wrapper">
+                    <img src="1000639007.jpg" alt="Integrated Translucent Bar Counter Lighting">
+                </div>
+                <div class="product-info">
+                    <h3>4. Integrated Translucent Counter Lighting</h3>
+                    <p>Uniform, shadow-free commercial counter illumination designed specifically for premium custom quartz, marble, or tiled architectural receptionist and hospitality bars.</p>
+                    <span class="badge">Seamless Diffusion</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image-wrapper">
+                    <img src="1000638795.jpg" alt="Modern Wooden Rafter Profile Lighting">
+                </div>
+                <div class="product-info">
+                    <h3>5. Wooden Rafter Profile Lighting</h3>
+                    <p>Sleek, oval recessed profile luminaires integrated flush into organic timber beam rafters. Offers smooth, balanced downlighting without harsh visual glare.</p>
+                    <span class="badge">Anti-Glare Comfort</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image-wrapper">
+                    <img src="1000638791.jpg" alt="Segmented Geometric Hub Fixtures">
+                </div>
+                <div class="product-info">
+                    <h3>6. Segmented Geometric Hub Fixtures</h3>
+                    <p>A futuristic ceiling piece segmented evenly into alternating amber-orange and emerald green backlit components, focused perfectly around deep geometric LED spotlights.</p>
+                    <span class="badge">Futuristic Design</span>
+                </div>
+            </div>
+
+        </div>
+
+        <footer>
+            <div class="footer-grid">
+                
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p class="email-text"><strong>Email:</strong> fineart1lighting@gmail.com</p>
+                    <p class="address-text">
+                        <strong>Address:</strong><br>
+                        #17-1-181/M/176, Darab Jung Colony,<br>
+                        Madannapet, Hyderabad, TS, India.
+                    </p>
+                    <p>
+                        <strong>Facebook:</strong><br>
+                        <a href="https://www.facebook.com/share/1En5HBUgfA/" target="_blank" class="social-link">Visit Our Official Page</a>
+                    </p>
+                </div>
+
+                <div class="contact-team">
+                    <h3>Our Team</h3>
+                    
+                    <div class="team-member">
+                        <div class="team-role">Proprietor</div>
+                        <div class="team-name">ABDUL KADER</div>
+                        <a href="https://wa.me/919849008323" class="phone-link">📞 +91 98490 08323 (WhatsApp)</a>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="team-role">Supervisor</div>
+                        <div class="team-name">SYED ADNAN</div>
+                        <a href="https://wa.me/917837836337" class="phone-link">📞 +91 78378 36337 (WhatsApp)</a>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="team-role">Manager</div>
+                        <div class="team-name">SYED ZEESHAN</div>
+                        <a href="https://wa.me/919502344413" class="phone-link">📞 +91 95023 44413 (WhatsApp)</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+</html>
